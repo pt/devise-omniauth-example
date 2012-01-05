@@ -31,12 +31,12 @@ FAQ
 
 On line 246 from:
 
-@request_line = read_line(socket, 1024) if socket
+      @request_line = read_line(socket, 1024) if socket
       if @request_line.bytesize >= 1024 and @request_line[-1, 1] != LF
 
 to:
 
-@request_line = read_line(socket, 2048) if socket
+      @request_line = read_line(socket, 2048) if socket
       if @request_line.bytesize >= 2048 and @request_line[-1, 1] != LF
 -----------
 
